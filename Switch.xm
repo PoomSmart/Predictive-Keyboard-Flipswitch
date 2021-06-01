@@ -41,4 +41,10 @@ static void PreferencesChanged() {
     [[UIKeyboardPreferencesController sharedPreferencesController] synchronizePreferences];
 }
 
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
+{
+    NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardPrediction"];
+    [[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
+}
+
 @end
