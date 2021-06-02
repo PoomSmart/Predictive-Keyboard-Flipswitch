@@ -1,9 +1,12 @@
-Package: org.thebigboss.predictivekeyboardfs
+Package: com.ps.predictivekeyboardflipswitch
 Name: Predictive Keyboard Flipswitch
-Depends: mobilesubstrate, com.a3tweaks.flipswitch, firmware (>= 8.0)
-Version: 0.0.1
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, firmware (>= 11.0)
+Provides: org.thebigboss.predictivekeyboardfs
+Replaces: org.thebigboss.predictivekeyboardfs
+Conflicts: org.thebigboss.predictivekeyboardfs
+Version: 1.0.0
 Architecture: iphoneos-arm
-Description: Toggle for Predictive Keyboard.
+Description: Flipswitch toggle for Predictive Keyboard.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Addons (Flipswitch)

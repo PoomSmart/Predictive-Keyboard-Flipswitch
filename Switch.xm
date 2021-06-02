@@ -1,8 +1,10 @@
+#import <Foundation/Foundation.h>
 #import <Flipswitch/FSSwitchDataSource.h>
 #import <Flipswitch/FSSwitchPanel.h>
+#import <version.h>
 
 @interface UIKeyboardPreferencesController : NSObject
-+ (UIKeyboardPreferencesController *)sharedPreferencesController;
++ (instancetype)sharedPreferencesController;
 - (id)valueForKey:(NSInteger)key;
 - (void)setValue:(id)value forKey:(NSInteger)key;
 - (void)synchronizePreferences;
@@ -41,8 +43,7 @@ static void PreferencesChanged() {
     [[UIKeyboardPreferencesController sharedPreferencesController] synchronizePreferences];
 }
 
-- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier {
     NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardPrediction"];
     [[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
 }
